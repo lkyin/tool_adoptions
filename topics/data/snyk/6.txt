@@ -1,0 +1,1 @@
+['fyi - due to the fact that travis ci builds are not exposing private environment variables to forked then snyk test will always fail. so for now this pr is on-hold until we can get a workaround from snyk.']

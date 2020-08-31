@@ -1,0 +1,1 @@
+["i think that codacy-bot doesn't like that you've only defined the var and never used it. you can do something stupid like ```syncchat.objectify()``` which returns json to resolve this. the proper solution is to create two lint configs. one for tests (where we can disable this) and one for src. where we can keep this enabled."]

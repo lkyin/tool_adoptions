@@ -1,0 +1,78 @@
+{
+    "spastorino": [
+        [
+            "2011-08-06T20:19:16Z",
+            "rails/rails",
+            "PushEvent"
+        ],
+        [
+            "2011-08-06T20:21:21Z",
+            "rails/rails",
+            "PushEvent"
+        ],
+        [
+            "2011-08-06T20:23:45Z",
+            "rails/rails",
+            "PushEvent"
+        ]
+    ],
+    "cliftonc": [
+        [
+            "2011-08-06T16:25:54Z",
+            "cliftonc/calipso",
+            "PushEvent"
+        ]
+    ],
+    "jblas": [
+        [
+            "2011-08-06T01:25:18Z",
+            "jquery/jquery-mobile",
+            "PushEvent"
+        ]
+    ],
+    "medikoo": [
+        [
+            "2011-08-06T21:27:18Z",
+            "medikoo/es5-ext",
+            "PushEvent"
+        ]
+    ],
+    "IgorMinar": [
+        [
+            "2011-08-06T08:54:28Z",
+            "angular/angular.js",
+            "PushEvent"
+        ]
+    ],
+    "andrewplummer": [
+        [
+            "2011-08-06T07:19:07Z",
+            "andrewplummer/Sugar",
+            "PushEvent"
+        ]
+    ],
+    "albertosantini": [
+        [
+            "2011-08-06T22:54:10Z",
+            "albertosantini/node-rio",
+            "PushEvent"
+        ]
+    ],
+    "isaacs": [
+        [
+            "2011-08-06T23:13:11Z",
+            "isaacs/rimraf",
+            "PushEvent"
+        ],
+        [
+            "2011-08-06T23:13:36Z",
+            "isaacs/rimraf",
+            "PushEvent"
+        ],
+        [
+            "2011-08-06T23:52:24Z",
+            "isaacs/rimraf",
+            "PushEvent"
+        ]
+    ]
+}

@@ -1,0 +1,1 @@
+['nejczdovc (sorry for delay)you can customize how codecov behaves:```yamlcodecov:  notify:    # after_n_builds: 1  # notify after n builds (default null)    # wait_for_ci: yes  # disable waiting for ci (default: yes)    require_ci_to_pass: no  # require ci to pass```']

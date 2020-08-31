@@ -1,0 +1,1 @@
+["rjrodger looks like print depended on the raw argv value from minimist. which optioner wasn't providing."]

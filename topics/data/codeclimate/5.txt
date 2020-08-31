@@ -1,0 +1,1 @@
+['this looks good and i am going to merge it but wanted to make a couple notes about the failing checks:- the codeclimate issues are about the number of arguments (which is fine) - the travis build is failing bc of the fork not having the environment variables set. as the tests all pass locally (where the env variables are set). it should be good to go']

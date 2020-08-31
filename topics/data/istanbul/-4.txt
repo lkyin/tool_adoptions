@@ -1,0 +1,1 @@
+['+2', "mongoskin uses some old code-coverage tools that don't quite have as clean instrumentation as istanbul. either way. mongoskin really doesn't support being included through browserify - there's not much mongoskin can really do on the browser given the current implementation of the underlying mongodb driver. what are you trying to do with mongoskin in the browser?"]

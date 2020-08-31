@@ -1,0 +1,62 @@
+{
+    "jdalton": [
+        [
+            "2011-07-10T02:01:35Z",
+            "bestiejs/benchmark.js",
+            "PushEvent"
+        ],
+        [
+            "2011-07-10T02:13:43Z",
+            "bestiejs/benchmark.js",
+            "PushEvent"
+        ],
+        [
+            "2011-07-10T02:16:12Z",
+            "bestiejs/benchmark.js",
+            "PushEvent"
+        ],
+        [
+            "2011-07-10T02:17:00Z",
+            "bestiejs/benchmark.js",
+            "PushEvent"
+        ]
+    ],
+    "flosse": [
+        [
+            "2011-07-10T00:39:55Z",
+            "flosse/scaleApp",
+            "PushEvent"
+        ]
+    ],
+    "josevalim": [
+        [
+            "2011-07-10T11:04:47Z",
+            "rails/rails",
+            "PushEvent"
+        ],
+        [
+            "2011-07-10T11:35:46Z",
+            "rails/rails",
+            "PushEvent"
+        ],
+        [
+            "2011-07-10T11:37:15Z",
+            "rails/rails",
+            "PushEvent"
+        ]
+    ],
+    "cliftonc": [
+        [
+            "2011-07-10T05:56:41Z",
+            "cliftonc/calipso",
+            "PushEvent"
+        ]
+    ],
+    "vojtajina": [
+        [
+            "2011-07-10T17:35:41Z",
+            "angular/angular.js",
+            "PushEvent"
+        ]
+    ]
+}
