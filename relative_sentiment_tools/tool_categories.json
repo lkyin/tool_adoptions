@@ -1,0 +1,33 @@
+{
+    "browser": [
+        "sauce",
+        "selenium",
+        "karma"
+    ],
+    "minif": [
+        "minimist",
+        "uglify",
+        "minifier"
+    ],
+    "testing": [
+        "jasmine",
+        "mocha",
+        "istanbul"
+    ],
+    "linter": [
+        "standard",
+        "jshint",
+        "eslint"
+    ],
+    "coverage": [
+        "coverity",
+        "codeclimate",
+        "codecov",
+        "codacy",
+        "coveralls"
+    ],
+    "depmgr": [
+        "gemnasium",
+        "snyk"
+    ]
+}

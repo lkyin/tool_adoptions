@@ -1,0 +1,21 @@
+{
+    "codeclimate": "coverage",
+    "minimist": "minif",
+    "sauce": "browser",
+    "codecov": "coverage",
+    "coverity": "coverage",
+    "standard": "linter",
+    "mocha": "testing",
+    "istanbul": "testing",
+    "jshint": "linter",
+    "uglify": "minif",
+    "jasmine": "testing",
+    "karma": "browser",
+    "snyk": "depmgr",
+    "selenium": "browser",
+    "minifier": "minif",
+    "eslint": "linter",
+    "coveralls": "coverage",
+    "gemnasium": "depmgr",
+    "codacy": "coverage"
+}

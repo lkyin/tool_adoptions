@@ -4,66 +4,53 @@ from tqdm import tqdm
 import datetime
 
 ###################################################################
-path = '/data/Adoption_data_new/comments1.1/final_combinations/'
+path = '../relative_sentiment_tools/final_combinations/'
 
-with open('./real_project_list.txt', 'r') as f:
-
+with open('./full_project_list.txt', 'r') as f:
     projects = f.readlines()
-
     project_list = [project.replace('\n', '') for project in projects]
 
-with open('/home/ylk1996/Research/CSCW1.1/data/tool_adoption.json', 'r') as f:
-
+with open('../relative_sentiment_devs/tool_adoption.json', 'r') as f:
     tool_adoption = json.load(f)
 
-with open('/home/ylk1996/Research/CSCW1.1/data/tool_categories.json', 'r') as f:
-
+with open('../relative_sentiment_tools/tool_categories.json', 'r') as f:
     tool_categories = json.load(f)
 
-with open('/home/ylk1996/Research/CSCW1.1/data/tool_belongs_cate.json', 'r') as jf:
-
+with open('../relative_sentiment_tools/tool_belongs_cate.json', 'r') as jf:
     tool_belongs_cate = json.load(jf)
 
-with open('/data/Adoption_data_new/authors/author_knowledge_dict.json', 'r') as jf:
-
+with open('../data/author_knowledge_dict.json', 'r') as jf:
     author_knowledge_dict = json.load(jf)
 
-with open('/data/Adoption_data_new/comments1.1/sentiment_dict.json', 'r') as jf:
-
+with open('../relative_sentiment_devs/sentiment_dict.json', 'r') as jf:
     sentiment_dict = json.load(jf)
 
-with open('/data/Adoption_data_new/commits/merged_dict.json', 'r') as jf:
-
+with open('../relative_sentiment_devs/merged_dict.json', 'r') as jf:
     author_commit_histroy = json.load(jf)
 
 with open('./project_age_dict.json', 'r') as jf:
-
     project_age_dict = json.load(jf)
 
-young_threshold = 90 
+
 
 ##############################################################################
 
 def is_exposed(author, time, tool, author_knowledge_dict):
 
     if (author not in author_knowledge_dict) or (tool not in author_knowledge_dict[author]):
-
         return False
 
     get_knowledge_date = author_knowledge_dict[author][tool]
-    
     if get_knowledge_date < time:
-
         return True
 
     return False
 
+young_threshold = 90 
 def is_young_by_commit(commit_history, start_time, end_time):
 
     first_commit_time = commit_history[0]
-
     if (first_commit_time >= start_time) and (first_commit_time <= end_time):
-
         return True
 
     #gap = date_minus(first_commit_time, time)
@@ -416,7 +403,7 @@ def date_minus(date1, date2):
 
 def get_start_time(project_name, tool):
 
-    path = '/data/Adoption_data_new/comments1.1/final_combinations/'
+    # path = '../relative_sentiment_tools/final_combinations/'
 
     project_name = project_name.replace('/', '__')
 
@@ -449,7 +436,7 @@ def get_start_time(project_name, tool):
 
 def get_end_time(project_name, tool, end_time):
 
-    path = '/data/Adoption_data_new/comments1.1/final_combinations/'
+    # path = '../relative_sentiment_tools/final_combinations/'
 
     project_name = project_name.replace('/', '__')
 
@@ -482,9 +469,9 @@ def get_end_time(project_name, tool, end_time):
     return None
 
 
-with open('final_table.csv', 'w') as f:
+with open('test.csv', 'w') as f:
 
-    f.write('project,tool,discussion_length,project_age,time_to_adoption,num_new,num_exposure,num_active,num_involved,num_committers,num_commits,num_negative_dev,num_positive_dev,num_comments,num_neutral_comments,num_positive_comments,num_negative_comments,num_mentions,influ,influ_at,status\n')
+    f.write('project,tool,discussion_length,project_age,time_to_adoption,num_new_dev,num_w_tool_expos,num_active,num_involved_dev,num_committers,num_commits,num_neg_dev,num_pos_dev,num_comments,num_neutral_comments,num_positive_comments,num_negative_comments,num_mentions,influ,influ_at,adoption_success\n')
 
     print(len(project_list))
 

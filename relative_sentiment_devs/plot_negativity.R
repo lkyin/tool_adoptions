@@ -1,65 +1,38 @@
-df1 <- data.frame(group=rep(c("Senior", "New"), each=24),
-                  month=rep(c(-11:12),2))
+# senior and new
 
-new = c(0.05120222728423184, 0.045953556061756516, 0.044241964059731714, 0.048658567451278154, 0.06191470513793976, 0.06697671475575803, 0.06132172686842391, 0.06395126007882274, 0.06751003362620674, 0.07653125790939003, 0.08230737245543625, 0.14958238420652997, 0.15716635933036843, 0.10791571753986334, 0.0912427233611744, 0.08061250316375601, 0.07381042773981271, 0.06340167046317388, 0.05545431536319919, 0.051632498101746395, 0.05669450771956466, 0.05179068590230322, 0.04992406985573273, 0.05017717033662364)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
-senior = c(0.095945180638836, 0.1047302724694524, 0.10386053244823176, 0.10383877069526273, 0.11071538665502219, 0.1147715030687696, 0.12344487027978215, 0.1310812257850982, 0.1446757285436436, 0.1505453450734228, 0.17366153946450075, 0.22700278726340636, 0.23138009168760873, 0.19935775253932553, 0.17881687619565537, 0.19161999933701737, 0.2192053108206131, 0.1885704041171011, 0.16271524611277038, 0.1601928079574821, 0.1726850113524373, 0.16973812566905158, 0.1736444079838157, 0.16372930673898786)
+df1 <- read.csv("./negativity_new_senior.csv")
 
-df1$num = 0
-
-df1[which(df1$group == 'New'),]$num = new
-
-df1[which(df1$group == 'Senior'),]$num = senior
-
-df1$sd = sd(df1$num)
-
-p<-ggplot(df1, aes(x=month, y=num, group=group)) +
+ggplot(df1, aes(x=month, y=num, group=group)) +
   geom_line(aes(color=group),linetype = "dashed", size = 0.8)+
   geom_point(aes(color=group),shape=0)+
   theme(legend.title = element_text(size=18), legend.text = element_text(size=18), legend.position = c(0.1, 0.80))+
   theme(axis.text.x = element_text(color = "grey20", size = 18, face = "plain"),
         axis.text.y = element_text(color = "grey20", size = 18, face = "plain"),  
         axis.title.x = element_text(color = "grey20", size = 18, face = "plain"),
-        axis.title.y = element_text(color = "grey20", size = 18, face = "plain"))
-  
-  
+        axis.title.y = element_text(color = "grey20", size = 15, face = "plain"))+
+  xlab("Relative months to Adoption") + ylab("Per Dev Neg Comments")+
+  +theme(plot.margin=grid::unit(c(0,0,0,0), "mm"))
 
-p+xlab("Relative months to Adoption") + ylab("Per Dev Neg Comments")
+ggsave('./negativity_new_c.pdf', device = "pdf")
 
+##################### Exposure #############
 
+df2 <- read.csv("./negativity_exposure.csv")
 
-
-
-
-
-#####################
-
-df1 <- data.frame(group=rep(c("Without Exposure", "With Exposure"), each=24),
-                  month=rep(c(-11:12),2))
-
-exposure = c(0.044602632245001265, 0.04888213954273179, 0.0413566185775753, 0.040151802765697985, 0.05628773908956141, 0.0691976714755758, 0.07319876824432632, 0.07106956044883152, 0.07729737359577907, 0.0844560147521423, 0.10340194164226055, 0.18187167173499746, 0.19511990635282211, 0.14045811187041257, 0.12528925769244678, 0.1313978131461047, 0.12874313423857842, 0.11008590350845475, 0.10056947608200455, 0.09927444528811273, 0.10325866869147052, 0.09567198177676538, 0.09412354919188634, 0.09024901635949473)
-
-unexposure = c(0.09811259635533068, 0.1002222912446683, 0.1047607226992193, 0.11021762869712756, 0.11025413041358369, 0.10749744557221094, 0.10919741674822, 0.11639249554967097, 0.13166549503394606, 0.14709831304575904, 0.15918590757211282, 0.20109675505461377, 0.20462962120137523, 0.17459070078660055, 0.14727194803624488, 0.15568126665791818, 0.16894862498507143, 0.15311866862040702, 0.13118828302396188, 0.12878708442489764, 0.1432414775808853, 0.14130396463824707, 0.14235150974900407, 0.13833955738853232)
-
-df1$num = 0
-
-df1[which(df1$group == 'With Exposure'),]$num = exposure
-
-df1[which(df1$group == 'Without Exposure'),]$num = unexposure
-
-df1$sd = sd(df1$num)
-
-p<-ggplot(df1, aes(x=month, y=num, group=group)) +
+ggplot(df2, aes(x=month, y=num, group=group)) +
   geom_line(aes(color=group),linetype = "dashed",size = 0.8)+
   geom_point(aes(color=group),shape=0)+
   theme(legend.title = element_text(size=18), legend.text = element_text(size=18), legend.position = c(0.2, 0.80))+
   theme(axis.text.x = element_text(color = "grey20", size = 18, face = "plain"),
         axis.text.y = element_text(color = "grey20", size = 18, face = "plain"),  
         axis.title.x = element_text(color = "grey20", size = 18, face = "plain"),
-        axis.title.y = element_text(color = "grey20", size = 18, face = "plain"))
+        axis.title.y = element_text(color = "grey20", size = 15, face = "plain"))+
+  xlab("Relative months to Adoption") + ylab("Per Dev Neg Comments") +
+  +theme(plot.margin=grid::unit(c(0,0,0,0), "mm"))
 
-
-p+xlab("Relative months to Adoption") + ylab("Per Dev Neg Comments") #+ geom_vline(xintercept = 0, color = "red", size=1)
+ggsave('./negativity_exposed_c.pdf', device = "pdf")
 
 
 
