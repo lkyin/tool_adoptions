@@ -1,5 +1,5 @@
 # Tool Adoptions
-This repository contains the data and code for [Team Discussions and Dynamics During DevOps Tool Adoptionsin OSS Projects (https://github.com/lkyin/tool_adoptions/blob/master/paper.pdf) (ASE 2020).
+This repository contains the data and code for [Team Discussions and Dynamics During DevOps Tool Adoptionsin OSS Projects] (https://github.com/lkyin/tool_adoptions/blob/master/paper.pdf) (ASE 2020).
 
 ## Data set
 The adoption data (i.e., GitHub Badges) is stored in adoption_data.csv file.
