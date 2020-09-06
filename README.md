@@ -17,7 +17,7 @@ This repository contains the data and code for [Team Discussions and Dynamics Du
 ## Replication
 To reproduce the results in the paper, you can use code and data in the following specific folder.
 
-1. To obtain the curves of various number of developers, run the jupyter file developers_trends/plot_curves.ipynb cell by cell. The jupyter file is dependent on the data in developers_trends/data folder.
+1. To obtain the curves of distribution of the adopted datas of tools and trends of various number of developers, run the jupyter file developers_trends/plot_curves.ipynb cell by cell. The jupyter file is dependent on the data in developers_trends/data folder.
 
 2. To get the relative negativity of developers: run relative_sentiment_devs/negativity_new_and_senior.py, which gives the negativity of new and senior developers per month. Then run relative_sentiment_devs/negativity_un_exposed.py to obtain the negativity of developers with exposure v.s. developers without exposure. Then run relative_sentiment_devs/plot_negativity.R to generate the curve plot.
 
