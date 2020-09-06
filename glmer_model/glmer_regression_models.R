@@ -1,5 +1,7 @@
 library(car)
-
+library(stargazer)
+library(lme4)
+library(MuMIn)
 
 ############################### Testing ################################
 df <- read.csv("final_table.csv")
