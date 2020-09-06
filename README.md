@@ -14,6 +14,15 @@ This repository contains the data and code for [Team Discussions and Dynamics Du
 
 - Sentiment data per project is stored under folder `relative_sentiment_devs/final_combinations`.
 
+## Sentimental Predictor
+We use [Senti4SD](https://github.com/collab-uniba/Senti4SD) as for sentimental prediction. 
+
+You need to install [Git LFS](https://git-lfs.github.com) extension to install Senti4SD locally. Once installed and initialized Git LFS, simply run:
+
+```bash
+$ git lfs clone https://github.com/collab-uniba/Senti4SD.git
+```
+
 ## Replication
 To reproduce the results in the paper, you can use code and data in the following specific folder.
 
@@ -32,15 +41,6 @@ To reproduce the results in the paper, you can use code and data in the followin
 - To build our glmer models for adoption success and discussion length. 
   - Run `python glmer_model/final_table.py` to generate the aggregated final table for regressions, 
   - Then run `Rscript glmer_model/glmer_regression_models.R` to obtain the two models with R^2 scores.
-
-## Sentimental Predictor
-We use [Senti4SD](https://github.com/collab-uniba/Senti4SD) as for sentimental prediction. 
-
-You need to install [Git LFS](https://git-lfs.github.com) extension to install Senti4SD locally. Once installed and initialized Git LFS, simply run:
-
-```bash
-$ git lfs clone https://github.com/collab-uniba/Senti4SD.git
-```
 
 
 
