@@ -34,7 +34,12 @@ To reproduce the results in the paper, you can use code and data in the followin
   - Then run `Rscript glmer_model/glmer_regression_models.R` to obtain the two models with R^2 scores.
 
 ## Sentimental Predictor
-We use [Senti4SD](https://github.com/collab-uniba/Senti4SD) as for prediction. 
+We use [Senti4SD](https://github.com/collab-uniba/Senti4SD) as for sentimental prediction. 
+
+You need to install [Git LFS](https://git-lfs.github.com) extension to install Senti4SD locally. Once installed and initialized Git LFS, simply run:
+
+```bash $ git lfs clone https://github.com/collab-uniba/Senti4SD.git```
+
 
 
 
