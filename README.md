@@ -2,17 +2,17 @@
 This repository contains the data and code for [Team Discussions and Dynamics During DevOps Tool Adoptionsin OSS Projects (ASE 2020)](https://github.com/lkyin/tool_adoptions/blob/master/paper.pdf).
 
 ## Data set
-- The adoption data (i.e., GitHub Badges) is stored in adoption_data.csv file (under the main folder), the json version adoption data (which is much tighter) is stored in data/tool_adoption_dict.json.
+- The adoption data (i.e., GitHub Badges) is stored in `adoption_data.csv` file (under the main folder), the json version adoption data (which is much tighter) is stored in `data/tool_adoption_dict.json`.
 
-- Comments data (with sentiment) is stored in data/comments_with_sentiment.json file.
+- Comments data (with sentiment) is stored in `data/comments_with_sentiment.json file`.
 
-- Exposure data is stored in author_knowledge_dict.json.
+- Exposure data is stored in `data/author_knowledge_dict.json`.
 
-- Commits are stored in the relative_sentiment_devs/merged_dict.json.
+- Commits are stored in the `relative_sentiment_devs/merged_dict.json`.
 
-- Github monthly events data from year 2011 to year 2018 is stored in folder data/events.
+- Github monthly events data from year 2011 to year 2018 is stored in folder `data/events`.
 
-- Sentiment data per project is stored under folder relative_sentiment_devs/final_combinations.
+- Sentiment data per project is stored under folder `relative_sentiment_devs/final_combinations`.
 
 ## Replication
 To reproduce the results in the paper, you can use code and data in the following specific folder.
@@ -38,8 +38,9 @@ We use [Senti4SD](https://github.com/collab-uniba/Senti4SD) as for sentimental p
 
 You need to install [Git LFS](https://git-lfs.github.com) extension to install Senti4SD locally. Once installed and initialized Git LFS, simply run:
 
-```bash $ git lfs clone https://github.com/collab-uniba/Senti4SD.git```
-
+```bash
+$ git lfs clone https://github.com/collab-uniba/Senti4SD.git
+```
 
 
 
