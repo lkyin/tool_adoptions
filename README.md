@@ -1,5 +1,17 @@
 # Tool Adoptions
-This repository contains the data and code for [Team Discussions and Dynamics During DevOps Tool Adoptionsin OSS Projects (ASE 2020)](https://www.cs.ucdavis.edu/~filkov/papers/ase2020.pdf).
+Hi there! This repository contains the data and code for [Team Discussions and Dynamics During DevOps Tool Adoptionsin OSS Projects (ASE 2020)](https://www.cs.ucdavis.edu/~filkov/papers/ase2020.pdf).
+
+If you find this work useful in your research, please consider citing:
+
+    @inproceedings{yin2020tool,
+    Author={Likang Yin and Vladimir Filkov},
+    Booktitle={2020 35th IEEE/ACM International Conference on Automated Software Engineering (ASE)}, 
+    Title={Team Discussions and Dynamics During DevOps Tool Adoptions in OSS Projects}, 
+    Year={2020},
+    Pages={697-708}
+    }
+
+
 
 ## Data Set
 - The adoption data (i.e., GitHub Badges) is stored in `adoption_data.csv` file (under the main folder), the json version adoption data (which is much tighter) is stored in `data/tool_adoption_dict.json`.
